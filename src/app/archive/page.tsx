@@ -73,14 +73,15 @@ export default function Archive() {
           {photos.map((photo) => (
             <div
               key={photo.id}
-              className="relative aspect-[4/3] overflow-hidden rounded-sm"
+              className="relative aspect-[4/3] overflow-hidden rounded-sm transition-all duration-200 ease-out hover:brightness-105 focus-visible:outline focus-visible:outline-2 focus-visible:outline-neutral-400 focus-visible:outline-offset-2"
+              tabIndex={0}
             >
               <Image
                 src={photo.src}
                 alt={photo.alt}
                 fill
                 sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
-                className="object-cover"
+                className="object-cover transition-all duration-200"
               />
             </div>
           ))}
